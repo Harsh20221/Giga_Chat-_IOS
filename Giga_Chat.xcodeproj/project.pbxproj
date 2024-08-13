@@ -16,6 +16,9 @@
 		699604EB2C6BEA2300A7C63F /* Giga_ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604EA2C6BEA2300A7C63F /* Giga_ChatTests.swift */; };
 		699604F52C6BEA2300A7C63F /* Giga_ChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604F42C6BEA2300A7C63F /* Giga_ChatUITests.swift */; };
 		699604F72C6BEA2300A7C63F /* Giga_ChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604F62C6BEA2300A7C63F /* Giga_ChatUITestsLaunchTests.swift */; };
+		699605562C6BED0200A7C63F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699605552C6BED0200A7C63F /* RegisterViewController.swift */; };
+		699605582C6BED0B00A7C63F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699605572C6BED0B00A7C63F /* ChatViewController.swift */; };
+		6996055A2C6BED1700A7C63F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699605592C6BED1700A7C63F /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		699604F02C6BEA2300A7C63F /* Giga_ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Giga_ChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		699604F42C6BEA2300A7C63F /* Giga_ChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giga_ChatUITests.swift; sourceTree = "<group>"; };
 		699604F62C6BEA2300A7C63F /* Giga_ChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giga_ChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		699605552C6BED0200A7C63F /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		699605572C6BED0B00A7C63F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		699605592C6BED1700A7C63F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				699604D32C6BEA2200A7C63F /* AppDelegate.swift */,
 				699604D52C6BEA2200A7C63F /* SceneDelegate.swift */,
 				699604D72C6BEA2200A7C63F /* ViewController.swift */,
+				699605552C6BED0200A7C63F /* RegisterViewController.swift */,
+				699605572C6BED0B00A7C63F /* ChatViewController.swift */,
+				699605592C6BED1700A7C63F /* LoginViewController.swift */,
 				699604D92C6BEA2200A7C63F /* Main.storyboard */,
 				699604DC2C6BEA2300A7C63F /* Assets.xcassets */,
 				699604DE2C6BEA2300A7C63F /* LaunchScreen.storyboard */,
@@ -258,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6996055A2C6BED1700A7C63F /* LoginViewController.swift in Sources */,
 				699604D82C6BEA2200A7C63F /* ViewController.swift in Sources */,
 				699604D42C6BEA2200A7C63F /* AppDelegate.swift in Sources */,
 				699604D62C6BEA2200A7C63F /* SceneDelegate.swift in Sources */,
+				699605582C6BED0B00A7C63F /* ChatViewController.swift in Sources */,
+				699605562C6BED0200A7C63F /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

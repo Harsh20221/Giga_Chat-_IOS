@@ -1,19 +1,22 @@
 //
-//  ViewController.swift
-//  Giga_Chat
+//  WelcomeViewController.swift
+//  Flash Chat iOS13
 //
-//  Created by Harsh Kumar on 14/08/24.
+//  Created by Angela Yu on 21/10/2019.
+//  Copyright © 2019 Angela Yu. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+       
+    }
+    
 
 }
-
