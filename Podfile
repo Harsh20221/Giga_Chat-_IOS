@@ -8,5 +8,7 @@ target 'Giga_Chat' do
   # Pods for Giga_Chat
 
  pod 'CLTypingLabel'
+ pod 'FirebaseAuth'
+ pod 'FirebaseFirestore'
 
 end

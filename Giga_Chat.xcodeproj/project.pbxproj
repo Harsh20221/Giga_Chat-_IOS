@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694F02262C6E74A5005D62BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 694F02252C6E74A5005D62BC /* GoogleService-Info.plist */; };
 		699604D42C6BEA2200A7C63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604D32C6BEA2200A7C63F /* AppDelegate.swift */; };
 		699604D62C6BEA2200A7C63F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604D52C6BEA2200A7C63F /* SceneDelegate.swift */; };
 		699604D82C6BEA2200A7C63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699604D72C6BEA2200A7C63F /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		058CB444FD34A8F8942423C5 /* Pods-Giga_Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giga_Chat.debug.xcconfig"; path = "Target Support Files/Pods-Giga_Chat/Pods-Giga_Chat.debug.xcconfig"; sourceTree = "<group>"; };
 		1FD13C5B2F8B9447F794C819 /* Pods_Giga_Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giga_Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		694F02252C6E74A5005D62BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		699604D02C6BEA2200A7C63F /* Giga_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giga_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699604D32C6BEA2200A7C63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		699604D52C6BEA2200A7C63F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				699604DC2C6BEA2300A7C63F /* Assets.xcassets */,
 				699604DE2C6BEA2300A7C63F /* LaunchScreen.storyboard */,
 				699604E12C6BEA2300A7C63F /* Info.plist */,
+				694F02252C6E74A5005D62BC /* GoogleService-Info.plist */,
 			);
 			path = Giga_Chat;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				699604DD2C6BEA2300A7C63F /* Assets.xcassets in Resources */,
+				694F02262C6E74A5005D62BC /* GoogleService-Info.plist in Resources */,
 				699604E02C6BEA2300A7C63F /* Base in Resources */,
 				699604DB2C6BEA2200A7C63F /* Base in Resources */,
 			);
@@ -448,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -505,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
