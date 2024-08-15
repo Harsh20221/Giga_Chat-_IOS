@@ -1,0 +1,6 @@
+framework module Pods_Giga_Chat {
+  umbrella header "Pods-Giga_Chat-umbrella.h"
+
+  export *
+  module * { export * }
+}
