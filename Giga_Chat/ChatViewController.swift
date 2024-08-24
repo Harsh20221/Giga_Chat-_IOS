@@ -44,7 +44,7 @@ extension ChatViewController :UITableViewDataSource{
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { ///This is also a necessary protocol for the chat controller
         let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableCell" , for: indexPath)    ///Here you can return the        type of cell that you will need in your table view
-        if #available(iOS 14.0, *) { ///Since textlabel is now depracted so we make an if else statement that will use the now latest .defaultcontent Configrator  if We have a supported IOS Device else it'll use the legacy textlabel instead 
+        if #available(iOS 14.0, *) { ///Since textlabel is now depracted so we make an if else statement that will use the now latest .defaultcontent Configrator  if We have a supported IOS Device else it'll use the legacy textlabel instead
             var content = cell.defaultContentConfiguration()
             content.text = messages[indexPath.row].body
             cell.contentConfiguration = content
@@ -52,7 +52,7 @@ extension ChatViewController :UITableViewDataSource{
         } else {
             // Fallback on earlier versions
             cell.textLabel?.text = messages[indexPath.row].body
-            return cell
+            return cell ///Here indexpath.row will act as the row number for the messages , means it'll help the textlabel to display or to assign a rowno to each message that we created in the messages array at the above part of this code
         }
         
     }
