@@ -29,7 +29,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton=true;//This will hide the back button
         title="🦖GigaChat"
-        tableView.dataSource=self ////!!!DO NOT FORGET TO ADD THIS STATEMENT OR ELSE YOUR TABLE VIEW WILL NOT LOAD THE TEXT THAT YOU HAVE SETUP AND YOU'LL BE LOST 
+        tableView.dataSource=self ////!!!DO NOT FORGET TO ADD THIS STATEMENT OR ELSE YOUR TABLE VIEW WILL NOT LOAD THE TEXT THAT YOU HAVE SETUP AND YOU'LL BE LOST
         
         
     }
