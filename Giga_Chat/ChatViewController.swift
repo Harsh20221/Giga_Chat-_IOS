@@ -80,7 +80,7 @@ class ChatViewController: UIViewController {
                    print("Successively Saved Data ")
                }})
        }
-    }
+        messageTextfield.text="" ////This will empty the text Box once the message is sent  }
     
 
 }
