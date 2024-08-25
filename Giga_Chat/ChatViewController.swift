@@ -3,12 +3,13 @@
 
 import FirebaseAuth
 import UIKit
+import FirebaseFirestoreInternal
 
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
-    
+    let db = Firestore.firestore() ///This will Initialize the database to be used below when the user will press send button 
     var messages :[Message] = [ ////? These are Dummy Messages that we'll display to check
     Message(sender: "123@gmai.com", body: "Hello This is a Test"),
     Message(sender: "456@gmail.com", body: "If you're seeing this then it's working "),
@@ -38,6 +39,10 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+       if  let messageBody=messageTextfield.text,  ///This will check if the message body has a meassage text an a sender email then it'll forward the message to the Database
+            let messageSender=Auth.auth().currentUser?.email{
+           
+       }
     }
     
 
