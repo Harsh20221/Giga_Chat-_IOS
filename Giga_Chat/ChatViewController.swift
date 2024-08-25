@@ -34,14 +34,48 @@ class ChatViewController: UIViewController {
         
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
-        
+        loadMessages()
         
     }
+    
+    func loadMessages(){
+     
+        db.collection("messages").addSnapshotListener{ (QuerySnapshot, error) in ////??db.collection method will help us to get retrieve the messages
+            ///??This .addsnapshotListener along with db.collection will help us to reflect instant changes in our tableview , This snapshot listener will reload the screen whenever we have a new message
+            self.messages = [] ///!!Reinitialise this message array to be an empty Array so that we don't have duplicate messages , we load a frezh messages array to avoid duplicates 
+            if  let e=error {  ///??This if let is used for better error handling to display the error if there is one or else display the required result
+                print("There is an issue Retrieveing data from Firestore ")
+            }
+            else {
+                if let snapshotDocuments = QuerySnapshot?.documents{ //??This QuerySnapshot.documents stores all the data stored in our database and in order to read all this data we use the for loop below and we print doc . data in the console currently to check if the data is retrieved successfully
+                    for doc in snapshotDocuments{
+                        let data = doc.data()
+                        if let messageSender = data["senderField"]as?String,let  messageBody=data["bodyField"] as?String {// If message is available then store them in a messageSender Variable and body in messageBody and append the message in messages Array,
+                            let newMessage = Message(sender: messageSender, body: messageBody)//Store the new message in a newmesasage Variable with fields sender and body
+                            self.messages.append(newMessage) ///Append the messages
+                            DispatchQueue.main.async{ //This Dispatch queue will process the following operation in the background
+                                self.tableView.reloadData() //We'll reload tableview after we have retrieved the messages
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
     
     @IBAction func sendPressed(_ sender: UIButton) {
        if  let messageBody=messageTextfield.text,  ///This will check if the message body has a meassage text an a sender email then it'll forward the message to the Database
             let messageSender=Auth.auth().currentUser?.email{
-           
+           db.collection("messages").addDocument(data:[ "senderField":messageSender,"bodyField":messageBody],completion: {(error) in
+               if let e = error {
+                   print("There is an issue retrieving data From The Firebase Database ")
+               }
+               else {
+                   print("Successively Saved Data ")
+               }})
        }
     }
     
