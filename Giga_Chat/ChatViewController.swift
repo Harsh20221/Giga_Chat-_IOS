@@ -40,9 +40,12 @@ class ChatViewController: UIViewController {
     
     func loadMessages(){
      
-        db.collection("messages").addSnapshotListener{ (QuerySnapshot, error) in ////??db.collection method will help us to get retrieve the messages
+        db.collection("messages").order(by: "dateField").addSnapshotListener{ (QuerySnapshot, error) in ////??db.collection method will help us to get retrieve the messages
+            ///This .order(by:"dateField") will order all the messages by dateField
+            ///
             ///??This .addsnapshotListener along with db.collection will help us to reflect instant changes in our tableview , This snapshot listener will reload the screen whenever we have a new message
-            self.messages = [] ///!!Reinitialise this message array to be an empty Array so that we don't have duplicate messages , we load a frezh messages array to avoid duplicates 
+        
+            self.messages = [] ///!!Reinitialise this message array to be an empty Array so that we don't have duplicate messages , we load a frezh messages array to avoid duplicates
             if  let e=error {  ///??This if let is used for better error handling to display the error if there is one or else display the required result
                 print("There is an issue Retrieveing data from Firestore ")
             }
@@ -69,7 +72,7 @@ class ChatViewController: UIViewController {
     @IBAction func sendPressed(_ sender: UIButton) {
        if  let messageBody=messageTextfield.text,  ///This will check if the message body has a meassage text an a sender email then it'll forward the message to the Database
             let messageSender=Auth.auth().currentUser?.email{
-           db.collection("messages").addDocument(data:[ "senderField":messageSender,"bodyField":messageBody],completion: {(error) in
+           db.collection("messages").addDocument(data:[ "senderField":messageSender,"bodyField":messageBody,"dateField":Date().timeIntervalSince1970],completion: {(error) in ////THEdateField will add a timestamp or we can say a time with every message stored or sent
                if let e = error {
                    print("There is an issue retrieving data From The Firebase Database ")
                }
