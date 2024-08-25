@@ -31,6 +31,9 @@ class ChatViewController: UIViewController {
         title="🦖GigaChat"
         tableView.dataSource=self ////!!!DO NOT FORGET TO ADD THIS STATEMENT OR ELSE YOUR TABLE VIEW WILL NOT LOAD THE TEXT THAT YOU HAVE SETUP AND YOU'LL BE LOST
         
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        
+        
         
     }
     
@@ -46,19 +49,13 @@ extension ChatViewController :UITableViewDataSource{
     
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { ///This is also a necessary protocol for the chat controller
-        let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableCell" , for: indexPath)    ///Here you can return the        type of cell that you will need in your table view
-        if #available(iOS 14.0, *) { ///Since textlabel is now depracted so we make an if else statement that will use the now latest .defaultcontent Configrator  if We have a supported IOS Device else it'll use the legacy textlabel instead
-            var content = cell.defaultContentConfiguration()
-            content.text = messages[indexPath.row].body
-            cell.contentConfiguration = content
-            return cell
-        } else {
+        let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableCell" , for: indexPath) as! MessageCell   ///Here you can return the        type of cell that you will need in your table view
+     
             // Fallback on earlier versions
-            cell.textLabel?.text = messages[indexPath.row].body
-            return cell ///Here indexpath.row will act as the row number for the messages , means it'll help the textlabel to display or to assign a rowno to each message that we created in the messages array at the above part of this code
-        }
+            cell.label.text = messages[indexPath.row].body ///Here indexpath.row will act as the row number for the messages , means it'll help the textlabel to display or to assign a rowno to each message that we created in the messages array at the above part of this code
         
+         return cell  
     }
-    
+ 
     
 }
