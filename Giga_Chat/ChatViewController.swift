@@ -94,6 +94,7 @@ class ChatViewController: UIViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier:"ReusableCell" , for: indexPath) as! MessageCell   ///Here you can return the        type of cell that you will need in your table view
             
             cell.label.text = message.body
+            ///The Below If else method will change the style of Chat Bubble cell based on Message from the current user and different User , If the recieving message is from current user than if statement will format the Bubble as per the conditions or else conditions will be executed if message from someone else is recieved 
             if message.sender==Auth.auth().currentUser?.email{
                 cell.leftImageView.isHidden=true
                 cell.rightImageView.isHidden=false
