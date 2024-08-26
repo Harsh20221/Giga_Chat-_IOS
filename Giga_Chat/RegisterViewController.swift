@@ -5,7 +5,7 @@
 
 import UIKit
 import FirebaseAuth
-
+/////
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextfield: UITextField!
@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController {
                 }
                 else {  ///Do not use self.should perform segueway else it will not transition to different screen 
                     self.performSegue(withIdentifier:  "FinalResult", sender: self) //Do not forget to add self before calling any method in the class ///Passwords must be atleast 6 charecters long
-                   print("succes")
+                   
                 }
             }
         }

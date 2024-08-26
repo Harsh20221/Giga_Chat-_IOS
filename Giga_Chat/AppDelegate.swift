@@ -9,15 +9,22 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        let db = Firestore.firestore() ///Make sure you paste all these firebase function at the same place inside this application function
+print(db) ///This is here to cheeck if the DB is Working
+        IQKeyboardManager.shared.enable=true //This will enable IQ keyboard manager
+        IQKeyboardManager.shared.enableAutoToolbar=false //This will disable the additional toolbar of IQ keyboard that we don't need
+        IQKeyboardManager.shared.resignOnTouchOutside=true //This will Dismiss the keyboard if we touch anywhere
         return true
     }
 
